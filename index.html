@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="photo-1601779144646-5e6a43c5d615.avif" type="image/x-icon">
+    <title>Kumar Vishnu Blog's</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-color: lavender;
+            font-family: 'Young Serif', serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        .container{
+            max-width: 85vw;
+            padding: 2rem 1rem;
+            margin: 0 auto;
+        }
+        .header-container{
+            margin-bottom: 2.2rem;
+        }
+        .header-title{
+            margin-bottom: 1rem;
+            font-size: 1.9rem;
+            font-weight: bold;
+            line-height: 2rem;
+            text-align: center;
+        }
+        .header-desc{
+            max-width: 568px;
+            text-align: center;
+            color: rgb(105, 99, 99);
+            margin: 0 auto;
+        }
+        .main-container{
+            display: grid;
+            gap: 1.5rem;
+            /* grid-template-columns: repeat(4, 1fr); */
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+        }
+    /* MEDIA QUERIES FOR RESPONSIVE SITE & DESIGN... */
+        /* @media (min-width:250px) {
+            .main-container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        @media (min-width:740px) {
+            .main-container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width:1080px) {
+            .main-container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width:1300px) {
+            .main-container{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        } */
+    /* .................................................... */
+        .card-container{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 0.5px solid rgb(234, 230, 230);
+            border-radius: 7px;
+        }
+        .card-image-container{
+            position: relative;
+            overflow: hidden;
+            height: 14rem;
+        }
+        /* @media (min-width:750px) {
+            .card-image-container{
+                height: 15rem;
+            }
+        } */
+        .card-image{
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        .card-title-container{
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+        .card-container:hover .card-image{
+            transform: scale(1.1);
+            transition-duration: 200ms;
+        }
+        .class-title{
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.5rem;
+            margin-bottom: 0.3rem;
+            color: rgb(25, 23, 23);
+        }
+        .card-title-anchor:hover .class-title{
+            color: red;
+        }
+        .card-body{
+            color: rgb(97, 88, 88);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .card-footer-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+        .author-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+        }
+        .author-avatar-container{
+            height: 2.5rem;
+            width: 2.5rem;
+            overflow: hidden;
+            border: 1px solid rgb(181, 175, 175);
+            border-radius: 50%;
+            background-color: rgb(144, 137, 137);
+        }
+        .author-avatar{
+            height: 2.3rem;
+            margin-right: 0.1rem;
+        }
+        .author-info-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .author-name{
+            color: rgb(38, 38, 149);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .author-date{
+            color: rgb(85, 78, 78);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .tag-container{
+            font-size: 0.8rem;
+            border: 1px solid rgb(76, 71, 71);
+            border-radius: 4px;
+            line-height: 1.5rem;
+            padding: 0.25rem 0.25rem;
+            font-weight: bold;
+        }
+        #footer-line{
+            text-align: center;
+            margin-top: -1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgb(25, 2, 25);
+        }
+        #footer-line:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body class="body-container">
+    <div class="container">
+        <header class="header-container">
+                <h2 class="header-title">
+                    < /> WebCoder Blog's
+                </h2>
+            <p class="header-desc">
+                Utilise This Space To Incorporate A Captivating Subheading 
+                Crafted By ChartGpt, Adding Depth & Intrigue To Your Blogs.
+            </p>
+        </header>
+        <main class="main-container">
+<!-- ................................................................................................................................................... -->
+            <!-- CARD 1 START'S FROM HERE -->
+            <div class="card-container">
+                <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                    <img src="merlin_165684495_6689b1a0-42b5-4228-b871-37bb983d797e-superJumbo.jpg"
+                        class="card-image"
+                        loading="lazy"
+                    />
+                </a>
+                <div class="card-title-container">
+                    <a href="#" class="card-title-anchor">
+                        <h3 class="class-title">
+                            Avoiding Junk Foods
+                        </h3>
+                        <p class="card-body">
+                            Avoid eating junk foods can be better for u &
+                            your upcoming generation. So Just Throw It!
+                        </p>
+                    </a>
+                </div>
+                <div class="card-footer-container">
+                    <div class="author-container">
+                        <div class="author-avatar-container">
+                            <img src="Screenshot (90).png"
+                            loading="lazy"
+                            class="author-avatar"/>
+                        </div>
+                        <div class="author-info-container">
+                            <span class="author-name">
+                                John Doe
+                            </span>
+                            <span class="author-date">
+                                Sep 19, 2021
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tag-container">
+                        <span>
+                            Health Tips
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 1 END'S HERE -->
+<!-- ................................................................................................................................................... -->
+            <!-- CARD 2 START'S FROM HERE -->
+            <div class="card-container">
+                <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                    <img src="photo-1604480132736-44c188fe4d20.avif"
+                        class="card-image"
+                        loading="lazy"
+                    />
+                </a>
+                <div class="card-title-container">
+                    <a href="#" class="card-title-anchor">
+                        <h3 class="class-title">
+                            Healthy Eating Tips
+                        </h3>
+                        <p class="card-body">
+                            Discover simple tips for maintaining a
+                            Healthy diet and making a nutrious food choices.
+                        </p>
+                    </a>
+                </div>
+                <div class="card-footer-container">
+                    <div class="author-container">
+                        <div class="author-avatar-container">
+                            <img src="Screenshot (90).png"
+                            loading="lazy"
+                            class="author-avatar"/>
+                        </div>
+                        <div class="author-info-container">
+                            <span class="author-name">
+                                Emily Smith
+                            </span>
+                            <span class="author-date">
+                                Feb 27, 2019
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tag-container">
+                        <span>
+                            nutrition
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 2 END'S HERE -->
+<!-- ................................................................................................................................................... -->
+            <!-- CARD 3 START'S FROM HERE -->
+            <div class="card-container">
+                <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                    <img src="photo-1601779144646-5e6a43c5d615.avif"
+                        class="card-image"
+                        loading="lazy"
+                    />
+                </a>
+                <div class="card-title-container">
+                    <a href="#" class="card-title-anchor">
+                        <h3 class="class-title">
+                            Concentration Of Mind
+                        </h3>
+                        <p class="card-body">
+                            We speak willpower but gathering together of mental energy, concentration power at point.
+                        </p>
+                    </a>
+                </div>
+                <div class="card-footer-container">
+                    <div class="author-container">
+                        <div class="author-avatar-container">
+                            <img src="Screenshot (90).png"
+                            loading="lazy"
+                            class="author-avatar"/>
+                        </div>
+                        <div class="author-info-container">
+                            <span class="author-name">
+                                Andreson
+                            </span>
+                            <span class="author-date">
+                                July 07, 2020
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tag-container">
+                        <span>
+                            Focusing !
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 3 END'S HERE -->
+<!-- ................................................................................................................................................... -->
+                        <!-- CARD 4 START'S FROM HERE -->
+                        <div class="card-container">
+                            <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                                <img src="photo-1510784722466-f2aa9c52fff6.avif"
+                                    class="card-image"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-title-container">
+                                <a href="#" class="card-title-anchor">
+                                    <h3 class="class-title">
+                                        Nature is Beauty
+                                    </h3>
+                                    <p class="card-body">
+                                        Goal of life living in agreement with nature &
+                                        One touch of nature makes the whole world kin.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="card-footer-container">
+                                <div class="author-container">
+                                    <div class="author-avatar-container">
+                                        <img src="Screenshot (90).png"
+                                        loading="lazy"
+                                        class="author-avatar"/>
+                                    </div>
+                                    <div class="author-info-container">
+                                        <span class="author-name">
+                                            David
+                                        </span>
+                                        <span class="author-date">
+                                            Dec 31, 2016
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="tag-container">
+                                    <span>
+                                        Naturing
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- CARD 4 END'S HERE -->
+<!-- ................................................................................................................................................... -->        
+                        <!-- CARD 5 START'S FROM HERE -->
+                        <div class="card-container">
+                            <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                                <img src="photo-1603206004639-22635b71ac08.avif"
+                                    class="card-image"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-title-container">
+                                <a href="#" class="card-title-anchor">
+                                    <h3 class="class-title">
+                                        Physical Wellness
+                                    </h3>
+                                    <p class="card-body">
+                                        He who has health, has hope; and he who has hope, has everything Arabian Proverb.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="card-footer-container">
+                                <div class="author-container">
+                                    <div class="author-avatar-container">
+                                        <img src="Screenshot (90).png"
+                                        loading="lazy"
+                                        class="author-avatar"/>
+                                    </div>
+                                    <div class="author-info-container">
+                                        <span class="author-name">
+                                            Steven
+                                        </span>
+                                        <span class="author-date">
+                                            Jan 09, 2017
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="tag-container">
+                                    <span>
+                                        Illness !
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARD 5 END'S HERE -->
+<!-- ................................................................................................................................................... -->
+                        <!-- CARD 6 START'S FROM HERE -->
+                        <div class="card-container">
+                            <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                                <img src="photo-1696862761045-0a65acbede8f.avif"
+                                    class="card-image"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-title-container">
+                                <a href="#" class="card-title-anchor">
+                                    <h3 class="class-title">
+                                        Be Confident On Yourself
+                                    </h3>
+                                    <p class="card-body">
+                                        When you're different, sometimes you don't see the millions of people who accept you for what you are.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="card-footer-container">
+                                <div class="author-container">
+                                    <div class="author-avatar-container">
+                                        <img src="Screenshot (90).png"
+                                        loading="lazy"
+                                        class="author-avatar"/>
+                                    </div>
+                                    <div class="author-info-container">
+                                        <span class="author-name">
+                                            Michel
+                                        </span>
+                                        <span class="author-date">
+                                            April 11, 2023
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="tag-container">
+                                    <span>
+                                        Confidence
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CARD 6 END'S HERE -->
+<!-- ................................................................................................................................................... -->
+                        <!-- CARD 7 START'S FROM HERE -->
+                        <div class="card-container">
+                            <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                                <img src="photo-1487017159836-4e23ece2e4cf.avif"
+                                    class="card-image"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-title-container">
+                                <a href="#" class="card-title-anchor">
+                                    <h3 class="class-title">
+                                        New Gadgets Released
+                                    </h3>
+                                    <p class="card-body">
+                                        Check out the latest tech gadgets hitting the market,
+                                        from smartphones to smartwatches.
+                                    </p>
+                                </a>
+                            </div>
+                        <div class="card-footer-container">
+                                <div class="author-container">
+                                    <div class="author-avatar-container">
+                                        <img src="Screenshot (90).png"
+                                        loading="lazy"
+                                        class="author-avatar"/>
+                                    </div>
+                                    <div class="author-info-container">
+                                        <span class="author-name">
+                                            Robin.Cl
+                                        </span>
+                                        <span class="author-date">
+                                            Oct 02, 2012
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="tag-container">
+                                <span>
+                                    Technology
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD 7 END'S HERE -->
+<!-- ................................................................................................................................................... -->
+                    <!-- CARD 8 START'S FROM HERE -->
+                        <div class="card-container">
+                            <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                                <img src="photo-1633867179970-c54688bcfa33.avif"
+                                    class="card-image"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-title-container">
+                                <a href="#" class="card-title-anchor">
+                                    <h3 class="class-title">
+                                        Mahindra Thar 4*4
+                                    </h3>
+                                    <p class="card-body">
+                                        You can buy happiness with money, when you buy Mahindra Thar honey.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="card-footer-container">
+                                <div class="author-container">
+                                    <div class="author-avatar-container">
+                                        <img src="Screenshot (90).png"
+                                        loading="lazy"
+                                        class="author-avatar"/>
+                                    </div>
+                                    <div class="author-info-container">
+                                        <span class="author-name">
+                                            Akhil.D
+                                        </span>
+                                        <span class="author-date">
+                                            Sep 19, 2021
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="tag-container">
+                                <span>
+                                    Kings/King !
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                <!-- CARD 8 END'S HERE -->
+<!-- ................................................................................................................................................... -->
+                                    <!-- CARD 9 START'S FROM HERE -->
+                                    <div class="card-container">
+                                        <a href="file:///C:/Users/vishn/Desktop/Mintra%20Clone/index.html" class="card-image-container">
+                                            <img src="photo-1693251952958-0f0f40882fe7.avif"
+                                                class="card-image"
+                                                loading="lazy"
+                                            />
+                                        </a>
+                                        <div class="card-title-container">
+                                            <a href="#" class="card-title-anchor">
+                                                <h3 class="class-title">
+                                                    I-phone Lovers
+                                                </h3>
+                                                <p class="card-body">
+                                                    Feel the thrill of the iPhone.“People decide your status by your iPhone.”
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-container">
+                                            <div class="author-container">
+                                                <div class="author-avatar-container">
+                                                    <img src="Screenshot (90).png"
+                                                    loading="lazy"
+                                                    class="author-avatar"/>
+                                                </div>
+                                                <div class="author-info-container">
+                                                    <span class="author-name">
+                                                        Asif Khan
+                                                    </span>
+                                                    <span class="author-date">
+                                                        June 15, 2007
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="tag-container">
+                                            <span>
+                                                Technology
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- CARD 9 END'S HERE -->
+<!-- ................................................................................................................................................... -->
+        </main>
+    </div>
+<!-- ................................................................................................................................................... -->
+        <footer id="footer-line">
+            <marquee direction="left">
+                &#169; WebCoder Blog's, Pvt.Ltd || All Rights Reserved.
+            </marquee>
+        </footer>
+<!-- ................................................................................................................................................... -->
+    <script>
+        alert("Safe Browsing");
+    </script>
+<!-- ................................................................................................................................................... -->
+</body>
+</html>
